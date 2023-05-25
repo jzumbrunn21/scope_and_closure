@@ -13,8 +13,34 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here
+function recVolume(height){
+  let product = 1;
 
+  product *= height;
+
+  return function eachDim1 (dim){
+    product *= dim;
+
+    return function eachDim2(dim2){
+      product *= dim2
+      return product;
+    }
+  }
+}
+
+// let volume = recVolume();
+// console.log(volume(6));
+// console.log(volume(5));
+// console.log(volume(4));
+// console.log(volume(2));
+
+// let volume = recVolume(1);
+// console.log(volume);
+// let dim1 = eachDim1(2);
+// console.log(dim1)
+// let dim2 = eachDim2(3);
+// console.log(dim2)
+// console.log(product);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
