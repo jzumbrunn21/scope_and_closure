@@ -22,20 +22,31 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-function lazyAdder(firstNum) {
-  let count = 0
-  count += firstNum
+// function lazyAdder(firstNum) {
+//   let count = 0
+//   count += firstNum
 
 
-  return function(secondNum) {
-    count+= secondNum
+//   return function(secondNum) {
+//     count+= secondNum
 
-    return function(thirdNum) {
-     return count+= thirdNum 
-    }
-  }
+//     return function(thirdNum) {
+//      return count+= thirdNum 
+//     }
+//   }
 
  
+// }
+
+function lazyAdder(firstNum){
+
+  
+  return function(second) {
+    let res = firstNum + second
+    return function(third){
+      return res + third
+    }
+  }
 }
 
 
