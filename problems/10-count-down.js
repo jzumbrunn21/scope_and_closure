@@ -30,21 +30,33 @@ Example 4:
 
 // Your code here
 
+// function countDownTimer(n) {
+
+//   if(n === 0) return "Happy New Year!"
+
+
+//   return function count() {
+//     n--
+//     if(n === 0){
+//       return "Happy New Year!"
+//     }
+//     if(n>0) {
+//       return count
+//     }
+
+//   }
+// }
+
 function countDownTimer(n) {
-
-  if(n === 0) return "Happy New Year!"
-
-
-  return function count() {
-    n--
-    if(n === 0){
-      return "Happy New Year!"
-    }
-    if(n>0) {
-      return count
-    }
-
-  }
+  if(n === 0) return "Happy New Year"
+  let res = () => {
+    n--;
+    if (n === 0) {
+      return "Happy New Year!";
+    } else return res
+    
+  };
+  return res
 }
 
 
