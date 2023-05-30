@@ -52,9 +52,9 @@ function curriedSum(numArgs){
   let sum = 0
   
 
-  let _curriedSum = (positiveNum) => {
+  let _curriedSum = (num) => {
   
-    numbers.push(positiveNum)
+    numbers.push(num)
     if(numbers.length === numArgs) {
       for(let nums of numbers){
         sum+=nums
@@ -76,7 +76,7 @@ function curriedSum(numArgs){
 
 // 2
 //this function can also be invoked like this:
-const sum = curriedSum(3)(-2)(1)(7); // => returns 10
+const sum = curriedSum(3)(2)(1)(7); // => returns 10
 console.log(sum)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
