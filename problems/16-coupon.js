@@ -16,6 +16,24 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 ***********************************************************************/
 
 // Your code here
+function coupon(discount) {
+  let newArr = []
+
+  return function(arr){
+    
+    for(let num of arr) {
+      newArr.push(num*(1-discount))
+    }
+    return newArr
+  }
+}
+
+let tenPercent = coupon(0.1);
+console.log(tenPercent([10, 20, 30])); // [ 9, 18, 27 ]
+
+
+let twentyPercent = coupon(0.2);
+console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
