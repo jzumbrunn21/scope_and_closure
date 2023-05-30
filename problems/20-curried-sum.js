@@ -76,7 +76,7 @@ function curriedSum(numArgs){
 
 // 2
 //this function can also be invoked like this:
-const sum = curriedSum(3)(2)(1)(7); // => returns 10
+const sum = curriedSum(3)(-2)(1)(7); // => returns 10
 console.log(sum)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
