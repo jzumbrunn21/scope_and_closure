@@ -32,7 +32,7 @@ function coinCollector(numCoins) {
 
 
   let coins = function(num){
-    if(newArr.length < numCoins){
+    if(newArr.length <= numCoins){
       newArr.push(num)
       return newArr
     }else{

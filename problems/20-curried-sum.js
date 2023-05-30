@@ -45,6 +45,39 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 // Your code here
 
+function curriedSum(numArgs){
+  if(numArgs <= 0) return null
+
+  let numbers = []
+  let sum = 0
+  
+
+  let _curriedSum = (positiveNum) => {
+  
+    numbers.push(positiveNum)
+    if(numbers.length === numArgs) {
+      for(let nums of numbers){
+        sum+=nums
+      }
+      return sum
+    }else return _curriedSum
+  }
+   return _curriedSum
+}
+
+
+//Example:
+// 1
+// const sum = curriedSum(4); // returns a function
+// console.log(sum(5)) // returns a function
+// console.log(sum(20)) // returns a function
+// console.log(sum(30)) // returns a function
+// console.log(sum(20)); // => returns 75
+
+// 2
+//this function can also be invoked like this:
+const sum = curriedSum(3)(2)(1)(7); // => returns 10
+console.log(sum)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
